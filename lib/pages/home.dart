@@ -24,7 +24,7 @@ class MyHomePageState extends State<MyHomePage> {
   Column body() {
     return Column(
       children: [
-        const SizedBox(height: 10),
+        // const SizedBox(height: 5),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
@@ -42,7 +42,7 @@ class MyHomePageState extends State<MyHomePage> {
                     child: Text(
                       "Transfer Money",
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 15,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
@@ -82,11 +82,10 @@ class MyHomePageState extends State<MyHomePage> {
                             children: [
                               Icon(Icons.qr_code, color: Colors.white),
                               Text(
-                                "UPI ID: 7019863826@ibl",
+                                " UPI ID: 7019863826@ibl",
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: Colors.white,
-                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
@@ -219,8 +218,8 @@ class MyHomePageState extends State<MyHomePage> {
     return Column(
       children: [
         Container(
-          width: 60,
-          height: 50,
+          width: 45,
+          height: 45,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(img),
