@@ -1,0 +1,4 @@
+phone pay header and footer color = rgba(63,31,100,255)
+phone pay item box color =rgba(32,24,42,255)
+phone pay apps color =rgba(149,94,209,255)
+phone pay background color =rgba(15,5,27,255)
