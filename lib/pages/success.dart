@@ -68,8 +68,8 @@ class SuccessState extends State<Success> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                width: 40, // Width of the rectangle
-                height: 40, // Height of the rectangle
+                width: 25, // Width of the rectangle
+                height: 25, // Height of the rectangle
                 decoration: BoxDecoration(
                   color: Colors.white, // Add white background color
                   image: const DecorationImage(
@@ -84,7 +84,7 @@ class SuccessState extends State<Success> {
                 "ICICI Bank - XX83",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 15,
                 ),
               ),
             ],
@@ -94,7 +94,7 @@ class SuccessState extends State<Success> {
             "Available balance:",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 20,
+              fontSize: 10,
             ),
           ),
           const SizedBox(height: 5),
@@ -102,7 +102,7 @@ class SuccessState extends State<Success> {
             "₹$formattedPin.00",
             style: const TextStyle(
               color: Colors.white,
-              fontSize: 50,
+              fontSize: 30,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -126,7 +126,7 @@ class SuccessState extends State<Success> {
           child: Text(
             'DONE',
             style: TextStyle(
-              color: Colors.white,
+              color: Color.fromRGBO(148, 61, 254, 1),
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),

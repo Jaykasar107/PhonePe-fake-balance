@@ -21,98 +21,98 @@ class MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Column body() {
-    return Column(
-      children: [
-        // const SizedBox(height: 5),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Card(
-            color: const Color(0xFF1E1424),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(4.0),
-                    child: Text(
-                      "Transfer Money",
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+ Column body() {
+  return Column(
+    children: [
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Card(
+          color: const Color(0xFF1E1424),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    "Transfer Money",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      _buildTransferOption("assets/icons/profile.png", "To Mobile\nNumber"),
-                      _buildTransferOption("assets/icons/bank.png", "To Bank/\nUPI ID"),
-                      _buildTransferOption("assets/icons/self.png", "To Self\nAccount"),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const CheckBalance()),
-                          );
-                        },
-                        child: _buildTransferOption("assets/icons/balance.png", "Check Bank\nBalance"),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  Card(
-                    color: const Color(0xFF1E1424),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 1, color: Colors.white),
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    _buildTransferOption("assets/icons/profile.png", "To Mobile\nNumber"),
+                    _buildTransferOption("assets/icons/bank.png", "To Bank/\nUPI ID"),
+                    _buildTransferOption("assets/icons/self.png", "To Self\nAccount"),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const CheckBalance()),
+                        );
+                      },
+                      child: _buildTransferOption("assets/icons/balance.png", "Check Bank\nBalance"),
                     ),
-                    child: const Padding(
-                      padding: EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(Icons.qr_code, color: Colors.white),
-                              Text(
-                                " UPI ID: 7019863826@ibl",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.white,
-                                ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Card(
+                  color: const Color(0xFF1E1424),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    side: const BorderSide(width: 1, color: Colors.white),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.qr_code, color: Colors.white),
+                            Text(
+                              " UPI ID: 7019863826@ibl",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
                               ),
-                            ],
-                          ),
-                          Icon(Icons.arrow_forward_ios, color: Colors.white),
-                        ],
-                      ),
+                            ),
+                          ],
+                        ),
+                        Icon(Icons.arrow_forward_ios, color: Colors.white),
+                      ],
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
-        Expanded(
-          child: Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/icons/body.png'),
-                fit: BoxFit.cover,
-              ),
+      ),
+      // The expanded widget will make the image take up the remaining space
+      Expanded(
+        child: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/icons/body.png'),
+              fit: BoxFit.cover, // Ensures the image covers the area properly
             ),
           ),
         ),
-      ],
-    );
-  }
+      ),
+    ],
+  );
+}
 
   BottomAppBar bottomlayer() {
     return BottomAppBar(
